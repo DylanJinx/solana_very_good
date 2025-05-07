@@ -14,6 +14,9 @@ pub mod counter_anchor {
 
     pub fn increment(ctx: Context<Increment>) -> Result<()> {
         ctx.accounts.counter.count = ctx.accounts.counter.count.checked_add(1).unwrap();
+
+        msg!("Very good!");
+        
         Ok(())
     }
 }

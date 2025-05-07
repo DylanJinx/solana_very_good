@@ -1,5 +1,8 @@
-# Anchor Counter
+# Program Account info
 
-Anchor enforces init constraints that enforces good programming paradigms.
-
-This means this program has an additional initialization instruction for `Counter`s that the Solana native program does not.
+```json
+{
+  "programId": "DEWptrf6sj7CGL62SWuSCDvkdTZoyHQzXk3zknRgUdWS",
+  "signature": "wAUDJJoPT1JYFpzJYmsKgusEXJTjBNTaPSyPoH7d1PyBMfB8JFDAJhWbt4bvtVqmdTG7ZY5cuRJ4YeYn9qgRfm3"
+}
+```
