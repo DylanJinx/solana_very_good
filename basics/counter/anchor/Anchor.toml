@@ -3,13 +3,13 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-counter_anchor = "BmDHboaj1kBUoinJKKSRqKfMeRKJqQqEbUj1VgzeQe4A"
+counter_anchor = "DEWptrf6sj7CGL62SWuSCDvkdTZoyHQzXk3zknRgUdWS"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Devnet"
+cluster = "https://sparkling-intensive-silence.solana-devnet.quiknode.pro/d0132feb23407dcc8f9b73fdc967a35c591776e9/"
 wallet  = "~/my-keypair.json"
 
 [scripts]

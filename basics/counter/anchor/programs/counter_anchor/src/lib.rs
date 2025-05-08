@@ -2,7 +2,7 @@
 
 use anchor_lang::prelude::*;
 
-declare_id!("BmDHboaj1kBUoinJKKSRqKfMeRKJqQqEbUj1VgzeQe4A");
+declare_id!("DEWptrf6sj7CGL62SWuSCDvkdTZoyHQzXk3zknRgUdWS");
 
 #[program]
 pub mod counter_anchor {
@@ -16,7 +16,7 @@ pub mod counter_anchor {
         ctx.accounts.counter.count = ctx.accounts.counter.count.checked_add(1).unwrap();
 
         msg!("Very good!");
-        
+
         Ok(())
     }
 }

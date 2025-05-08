@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "types": ["mocha", "chai"],
-    "typeRoots": ["./node_modules/@types"],
-    "lib": ["es2015"],
     "module": "commonjs",
-    "target": "es6",
-    "esModuleInterop": true
+    "moduleResolution": "node", // 默认为 node，也可以删掉
+    "target": "es2020",
+    "lib": ["es2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   }
 }
