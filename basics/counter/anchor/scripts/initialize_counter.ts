@@ -32,26 +32,26 @@ const idl = JSON.parse(
 
 const program = new anchor.Program(idl, provider);
 
-// ---------- 5. 读取已保存的 Counter pubkey ----------
-const counterSecret = JSON.parse(
-  fs.readFileSync("./counter-keypair.json", "utf8")
+// ---------- 5. 生成 Counter Keypair && 保存 ----------
+const counterKp = anchor.web3.Keypair.generate();
+fs.writeFileSync(
+  "./counter-keypair.json",
+  JSON.stringify(Array.from(counterKp.secretKey))
 );
-const counterPubkey = anchor.web3.Keypair.fromSecretKey(
-  new Uint8Array(counterSecret)
-).publicKey;
 
-console.log("Counter pubkey:", counterPubkey.toBase58());
+console.log("Counter pubkey:", counterKp.publicKey.toBase58());
 
-// ---------- 6. 调用 increment ----------
+// ---------- 6. 调用 initialize_counter ----------
 (async () => {
   const sig = await program.methods
-    .increment()
-    .accounts({ counter: counterPubkey })
+    .initializeCounter()
+    .accounts({
+      payer: wallet.publicKey,
+      counter: counterKp.publicKey,
+      systemProgram: anchor.web3.SystemProgram.programId,
+    })
+    .signers([counterKp]) // !! 新账户必须签名
     .rpc();
 
-  console.log("Increment tx:", sig);
-
-  // 可选：打印日志
-  const tx = await connection.getTransaction(sig, { commitment: "confirmed" });
-  tx?.meta?.logMessages?.forEach((l) => console.log(l));
+  console.log("Initialize tx:", sig);
 })();

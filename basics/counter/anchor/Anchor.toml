@@ -2,7 +2,7 @@
 seeds = false
 skip-lint = false
 
-[programs.localnet]
+[programs.devnet]
 counter_anchor = "DEWptrf6sj7CGL62SWuSCDvkdTZoyHQzXk3zknRgUdWS"
 
 [registry]
