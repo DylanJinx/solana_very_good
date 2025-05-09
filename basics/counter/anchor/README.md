@@ -6,3 +6,7 @@
   "signature": "wAUDJJoPT1JYFpzJYmsKgusEXJTjBNTaPSyPoH7d1PyBMfB8JFDAJhWbt4bvtVqmdTG7ZY5cuRJ4YeYn9qgRfm3"
 }
 ```
+
+# scripts 脚本运行
+
+![alt text](image.png)
