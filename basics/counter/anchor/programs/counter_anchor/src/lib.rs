@@ -1,8 +1,10 @@
 #![allow(clippy::result_large_err)]
+#![allow(unexpected_cfgs)]
 
 use anchor_lang::prelude::*;
 
 declare_id!("DEWptrf6sj7CGL62SWuSCDvkdTZoyHQzXk3zknRgUdWS");
+
 
 #[program]
 pub mod counter_anchor {
